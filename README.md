@@ -47,6 +47,7 @@ Text files containing processed documentation or code context for LLMs:
 - `typescript_full.txt`
 - `react_learn_llms.txt`
 - `react_reference_llms.txt`
+- `ms_agent_framework_llms.txt`
 
 
 ### LLMs.txt files created already
