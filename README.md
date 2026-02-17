@@ -1,54 +1,65 @@
 # llms-txt-files-and-converters
 
-This repository contains a collection of Large Language Model (LLM) context files and Python scripts for converting various API documentation and codebases into text formats suitable for LLM ingestion or analysis.
+This repository provides:
+
+- Python scripts to convert API documentation, codebases, and guides into text files suitable for Large Language Model (LLM) ingestion.
+- A collection of pre-converted LLM context files for various technologies and APIs.
 
 ## Repository Structure
 
-- **Python Converter Scripts**: Scripts for converting API specs, documentation, and codebases into LLM-friendly text files.
-  - `convert_docs.py`
-  - `convert_emby_jellyfin.py`
-  - `convert_lit.py`
-  - `convert_nestjs-1.py`
-  - `convert_rn.py`
-  - `convert_seer.py`
-  - `convert_supabase.py`
-  - `convert_ts.py`
-  - `convert.py`
+### Python Converter Scripts
+Scripts for extracting and converting documentation or codebases:
 
-- **API/OpenAPI/Swagger Files**: Source files for conversion.
-  - `emby-api.json`
-  - `jellyfin-openapi-stable.json`
-  - `swagger_full.json`
-  - `Proxmox VE Administration Guide.html`
-  - `lit_full.txt`
+- `convert.py` — General conversion utility
+- `convert_docs.py` — For documentation files
+- `convert_emby_jellyfin.py` — For Emby/Jellyfin OpenAPI specs
+- `convert_lit.py` — For Lit framework
+- `convert_nestjs-1.py` — For NestJS
+- `convert_rn.py` — For React Native
+- `convert_seer.py` — For Seer
+- `convert_supabase.py` — For Supabase
+- `convert_ts.py` — For TypeScript
 
-- **LLM Context Files**: Output files containing processed documentation or code context for LLMs, organized in the `llms/` directory.
-  - `effect-llms-full.txt`
-  - `emby-api-llms.txt`
-  - `jellyfin-openapi-stable-llms.txt`
-  - `lit_full.txt`
-  - `nestjs_full.txt`
-  - `proxmox-llms-full.txt`
-  - `react_native_llms.txt`
-  - `react-paper-llms-full.txt`
-  - `seer-llms.txt`
-  - `supabase_js_context.txt`
-  - `typescript_full.txt`
+### Source Files
+API specs, documentation, and guides to be converted:
+
+- `emby-api.json`
+- `jellyfin-openapi-stable.json`
+- `swagger_full.json`
+- `Proxmox VE Administration Guide.html`
+- `lit_full.txt`
+
+### LLM Context Files (`llms/`)
+Text files containing processed documentation or code context for LLMs:
+
+- `effect-llms-full.txt`
+- `emby-api-llms.txt`
+- `jellyfin-openapi-stable-llms.txt`
+- `lit_full.txt`
+- `nestjs_full.txt`
+- `proxmox-llms-full.txt`
+- `react_native_llms.txt`
+- `react-paper-llms-full.txt`
+- `seer-llms.txt`
+- `supabase_js_context.txt`
+- `typescript_full.txt`
+- `react_learn_llms.txt`
 
 ## Usage
 
-1. **Convert Documentation**: Use the provided Python scripts to convert API specs or documentation into LLM context files. Each script is tailored for a specific source or format.
-2. **LLM Context Files**: The generated `.txt` files in the `llms/` directory can be used as input for LLM training, fine-tuning, or prompt engineering.
+1. **Convert Documentation**: Run the relevant Python script to convert a source file into an LLM context file. For example:
 
-## Example
+   ```bash
+   python convert_emby_jellyfin.py
+   ```
 
-To convert the Emby API OpenAPI spec to a text file for LLMs:
+   The output will be saved in the `llms/` directory.
 
-```bash
-python convert_emby_jellyfin.py
-```
+2. **Use LLM Context Files**: The `.txt` files in `llms/` can be used for LLM prompt engineering, fine-tuning, or as reference material.
 
-The output will be saved as `llms/emby-api-llms.txt`.
+## Contributing
+
+Feel free to submit issues or pull requests for new converters or improvements.
 
 ## License
 
