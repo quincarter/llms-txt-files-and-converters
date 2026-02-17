@@ -1,0 +1,1 @@
+These files in this directory are designed to be sub agents that can be dedicated to a specific task and can specialize.

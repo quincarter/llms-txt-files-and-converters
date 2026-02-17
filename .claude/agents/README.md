@@ -1,0 +1,1 @@
+refer to the agents in the [../../.gemini/agents](../../.gemini/agents) folder.
