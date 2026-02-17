@@ -1,3 +1,4 @@
+
 # llms-txt-files-and-converters
 
 This repository provides:
@@ -7,8 +8,7 @@ This repository provides:
 
 ## Repository Structure
 
-### Python Converter Scripts
-
+### Python Converter Scripts (`scripts/`)
 Scripts for extracting and converting documentation or codebases:
 
 - `convert.py` — General conversion utility
@@ -20,19 +20,18 @@ Scripts for extracting and converting documentation or codebases:
 - `convert_seer.py` — For Seer
 - `convert_supabase.py` — For Supabase
 - `convert_ts.py` — For TypeScript
+- `convert_react_learn.py` — For React Learn
+- `convert_react_dev.py` — For React Dev
 
-### Source Files
-
+### Source Files (`json-and-html/`)
 API specs, documentation, and guides to be converted:
 
 - `emby-api.json`
 - `jellyfin-openapi-stable.json`
 - `swagger_full.json`
 - `Proxmox VE Administration Guide.html`
-- `lit_full.txt`
 
 ### LLM Context Files (`llms/`)
-
 Text files containing processed documentation or code context for LLMs:
 
 - `effect-llms-full.txt`
@@ -47,7 +46,36 @@ Text files containing processed documentation or code context for LLMs:
 - `supabase_js_context.txt`
 - `typescript_full.txt`
 - `react_learn_llms.txt`
+- `react_reference_llms.txt`
+
+
+### LLMs.txt files created already
 - [NextJS](https://nextjs.org/llms.txt) - this one had one created
+
+
+## Usage
+
+1. **Convert Documentation**: Run the relevant Python script from the `scripts/` directory to convert a source file into an LLM context file. For example:
+
+   ```bash
+   python scripts/convert_emby_jellyfin.py
+   ```
+
+   The output will be saved in the `llms/` directory.
+
+2. **Use LLM Context Files**: The `.txt` files in `llms/` can be used for LLM prompt engineering, fine-tuning, or as reference material.
+
+## Contributing
+
+Feel free to submit issues or pull requests for new converters or improvements.
+
+## License
+
+MIT License
+
+## Author
+
+[quincarter](https://github.com/quincarter)
 
 ## Usage
 
