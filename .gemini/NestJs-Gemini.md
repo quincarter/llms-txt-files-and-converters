@@ -102,4 +102,35 @@ When you ask me to build a feature, use this workflow:
 
 ---
 
+---
+
+## Using Agents from `.gemini/agents`
+
+The `.gemini/agents` directory contains specialized agent instruction files for different roles and tasks, such as backend development, code review, testing automation, and more.
+
+**How AI Should Use These Agents:**
+
+1. **Select the Appropriate Agent:**
+  - Choose the agent file that best matches the required role or task (e.g., `code-reviewer.md`, `test-automator.md`).
+2. **Load the Agent Instructions:**
+  - Read the agent's instruction file to understand its capabilities, constraints, and workflow.
+3. **Delegate Tasks:**
+  - When a task matches an agent's specialty, delegate the task to that agent for focused execution (e.g., code review, test automation).
+4. **Integrate Agent Output:**
+  - Use the agent's output as part of the overall project workflow, ensuring it aligns with the main instruction set and project requirements.
+
+**Example Workflow:**
+
+> "For a new backend feature, use the main instructions to plan the schema and tests. Then, delegate code review to the `code-reviewer.md` agent, and test automation to the `test-automator.md` agent. Integrate their outputs and ensure all requirements are met."
+
+Agents available:
+
+- `frontend-developer.md`
+- `mobile-developer.md`
+- `typescript-pro.md`
+- `ui-designer.md`
+- `react-specialist.md`
+- `test-automator.md`
+- `code-reviewer.md`
+
 **End of Instruction File**
