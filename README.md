@@ -8,6 +8,7 @@ This repository provides:
 ## Repository Structure
 
 ### Python Converter Scripts
+
 Scripts for extracting and converting documentation or codebases:
 
 - `convert.py` — General conversion utility
@@ -21,6 +22,7 @@ Scripts for extracting and converting documentation or codebases:
 - `convert_ts.py` — For TypeScript
 
 ### Source Files
+
 API specs, documentation, and guides to be converted:
 
 - `emby-api.json`
@@ -30,6 +32,7 @@ API specs, documentation, and guides to be converted:
 - `lit_full.txt`
 
 ### LLM Context Files (`llms/`)
+
 Text files containing processed documentation or code context for LLMs:
 
 - `effect-llms-full.txt`
@@ -44,6 +47,7 @@ Text files containing processed documentation or code context for LLMs:
 - `supabase_js_context.txt`
 - `typescript_full.txt`
 - `react_learn_llms.txt`
+- [NextJS](https://nextjs.org/llms.txt) - this one had one created
 
 ## Usage
 
