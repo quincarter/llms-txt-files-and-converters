@@ -1,0 +1,933 @@
+# Sonarr API Documentation
+Version: 3.0.0
+Description: Sonarr API docs - The v3 API docs apply to both v3 and v4 versions of Sonarr. Some functionality may only be available in v4 of the Sonarr application.
+
+## GET /api
+
+## POST /login
+**Parameters**:
+- `returnUrl` (query string): 
+
+## GET /login
+
+## GET /logout
+
+## POST /api/v3/autotagging
+**Body**: Requires object `AutoTaggingResource`
+
+## GET /api/v3/autotagging
+
+## PUT /api/v3/autotagging/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `AutoTaggingResource`
+
+## DELETE /api/v3/autotagging/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/autotagging/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/autotagging/schema
+
+## GET /api/v3/system/backup
+
+## DELETE /api/v3/system/backup/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/system/backup/restore/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/system/backup/restore/upload
+
+## GET /api/v3/blocklist
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `seriesIds` (query array): 
+- `protocols` (query array): 
+
+## DELETE /api/v3/blocklist/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## DELETE /api/v3/blocklist/bulk
+**Body**: Requires object `BlocklistBulkResource`
+
+## GET /api/v3/calendar
+**Parameters**:
+- `start` (query string): 
+- `end` (query string): 
+- `unmonitored` (query boolean): 
+- `includeSeries` (query boolean): 
+- `includeEpisodeFile` (query boolean): 
+- `includeEpisodeImages` (query boolean): 
+- `tags` (query string): 
+
+## GET /api/v3/calendar/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /feed/v3/calendar/sonarr.ics
+**Parameters**:
+- `pastDays` (query integer): 
+- `futureDays` (query integer): 
+- `tags` (query string): 
+- `unmonitored` (query boolean): 
+- `premieresOnly` (query boolean): 
+- `asAllDay` (query boolean): 
+
+## POST /api/v3/command
+**Body**: Requires object `CommandResource`
+
+## GET /api/v3/command
+
+## DELETE /api/v3/command/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/command/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/customfilter
+
+## POST /api/v3/customfilter
+**Body**: Requires object `CustomFilterResource`
+
+## PUT /api/v3/customfilter/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `CustomFilterResource`
+
+## DELETE /api/v3/customfilter/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/customfilter/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/customformat
+
+## POST /api/v3/customformat
+**Body**: Requires object `CustomFormatResource`
+
+## PUT /api/v3/customformat/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `CustomFormatResource`
+
+## DELETE /api/v3/customformat/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/customformat/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/customformat/bulk
+**Body**: Requires object `CustomFormatBulkResource`
+
+## DELETE /api/v3/customformat/bulk
+**Body**: Requires object `CustomFormatBulkResource`
+
+## GET /api/v3/customformat/schema
+
+## GET /api/v3/wanted/cutoff
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `includeSeries` (query boolean): 
+- `includeEpisodeFile` (query boolean): 
+- `includeImages` (query boolean): 
+- `monitored` (query boolean): 
+
+## GET /api/v3/wanted/cutoff/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/delayprofile
+**Body**: Requires object `DelayProfileResource`
+
+## GET /api/v3/delayprofile
+
+## DELETE /api/v3/delayprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/delayprofile/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `DelayProfileResource`
+
+## GET /api/v3/delayprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/delayprofile/reorder/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `after` (query integer): 
+
+## GET /api/v3/diskspace
+
+## GET /api/v3/downloadclient
+
+## POST /api/v3/downloadclient
+**Parameters**:
+- `forceSave` (query boolean): 
+**Body**: Requires object `DownloadClientResource`
+
+## PUT /api/v3/downloadclient/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `forceSave` (query boolean): 
+**Body**: Requires object `DownloadClientResource`
+
+## DELETE /api/v3/downloadclient/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/downloadclient/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/downloadclient/bulk
+**Body**: Requires object `DownloadClientBulkResource`
+
+## DELETE /api/v3/downloadclient/bulk
+**Body**: Requires object `DownloadClientBulkResource`
+
+## GET /api/v3/downloadclient/schema
+
+## POST /api/v3/downloadclient/test
+**Parameters**:
+- `forceTest` (query boolean): 
+**Body**: Requires object `DownloadClientResource`
+
+## POST /api/v3/downloadclient/testall
+
+## POST /api/v3/downloadclient/action/{name}
+**Parameters**:
+- `name`* (path string): 
+**Body**: Requires object `DownloadClientResource`
+
+## GET /api/v3/config/downloadclient
+
+## PUT /api/v3/config/downloadclient/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `DownloadClientConfigResource`
+
+## GET /api/v3/config/downloadclient/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/episode
+**Parameters**:
+- `seriesId` (query integer): 
+- `seasonNumber` (query integer): 
+- `episodeIds` (query array): 
+- `episodeFileId` (query integer): 
+- `includeSeries` (query boolean): 
+- `includeEpisodeFile` (query boolean): 
+- `includeImages` (query boolean): 
+
+## PUT /api/v3/episode/{id}
+**Parameters**:
+- `id`* (path integer): 
+**Body**: Requires object `EpisodeResource`
+
+## GET /api/v3/episode/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/episode/monitor
+**Parameters**:
+- `includeImages` (query boolean): 
+**Body**: Requires object `EpisodesMonitoredResource`
+
+## GET /api/v3/episodefile
+**Parameters**:
+- `seriesId` (query integer): 
+- `episodeFileIds` (query array): 
+
+## PUT /api/v3/episodefile/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `EpisodeFileResource`
+
+## DELETE /api/v3/episodefile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/episodefile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/episodefile/editor
+**Body**: Requires object `EpisodeFileListResource`
+
+## DELETE /api/v3/episodefile/bulk
+**Body**: Requires object `EpisodeFileListResource`
+
+## PUT /api/v3/episodefile/bulk
+
+## GET /api/v3/filesystem
+**Parameters**:
+- `path` (query string): 
+- `includeFiles` (query boolean): 
+- `allowFoldersWithoutTrailingSlashes` (query boolean): 
+
+## GET /api/v3/filesystem/type
+**Parameters**:
+- `path` (query string): 
+
+## GET /api/v3/filesystem/mediafiles
+**Parameters**:
+- `path` (query string): 
+
+## GET /api/v3/health
+
+## GET /api/v3/history
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `includeSeries` (query boolean): 
+- `includeEpisode` (query boolean): 
+- `eventType` (query array): 
+- `episodeId` (query integer): 
+- `downloadId` (query string): 
+- `seriesIds` (query array): 
+- `languages` (query array): 
+- `quality` (query array): 
+
+## GET /api/v3/history/since
+**Parameters**:
+- `date` (query string): 
+- `eventType` (query string): 
+- `includeSeries` (query boolean): 
+- `includeEpisode` (query boolean): 
+
+## GET /api/v3/history/series
+**Parameters**:
+- `seriesId` (query integer): 
+- `seasonNumber` (query integer): 
+- `eventType` (query string): 
+- `includeSeries` (query boolean): 
+- `includeEpisode` (query boolean): 
+
+## POST /api/v3/history/failed/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/config/host
+
+## PUT /api/v3/config/host/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `HostConfigResource`
+
+## GET /api/v3/config/host/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/importlist
+
+## POST /api/v3/importlist
+**Parameters**:
+- `forceSave` (query boolean): 
+**Body**: Requires object `ImportListResource`
+
+## PUT /api/v3/importlist/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `forceSave` (query boolean): 
+**Body**: Requires object `ImportListResource`
+
+## DELETE /api/v3/importlist/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/importlist/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/importlist/bulk
+**Body**: Requires object `ImportListBulkResource`
+
+## DELETE /api/v3/importlist/bulk
+**Body**: Requires object `ImportListBulkResource`
+
+## GET /api/v3/importlist/schema
+
+## POST /api/v3/importlist/test
+**Parameters**:
+- `forceTest` (query boolean): 
+**Body**: Requires object `ImportListResource`
+
+## POST /api/v3/importlist/testall
+
+## POST /api/v3/importlist/action/{name}
+**Parameters**:
+- `name`* (path string): 
+**Body**: Requires object `ImportListResource`
+
+## GET /api/v3/config/importlist
+
+## PUT /api/v3/config/importlist/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `ImportListConfigResource`
+
+## GET /api/v3/config/importlist/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/importlistexclusion
+
+## POST /api/v3/importlistexclusion
+**Body**: Requires object `ImportListExclusionResource`
+
+## GET /api/v3/importlistexclusion/paged
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+
+## PUT /api/v3/importlistexclusion/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `ImportListExclusionResource`
+
+## DELETE /api/v3/importlistexclusion/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/importlistexclusion/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## DELETE /api/v3/importlistexclusion/bulk
+**Body**: Requires object `ImportListExclusionBulkResource`
+
+## GET /api/v3/indexer
+
+## POST /api/v3/indexer
+**Parameters**:
+- `forceSave` (query boolean): 
+**Body**: Requires object `IndexerResource`
+
+## PUT /api/v3/indexer/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `forceSave` (query boolean): 
+**Body**: Requires object `IndexerResource`
+
+## DELETE /api/v3/indexer/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/indexer/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/indexer/bulk
+**Body**: Requires object `IndexerBulkResource`
+
+## DELETE /api/v3/indexer/bulk
+**Body**: Requires object `IndexerBulkResource`
+
+## GET /api/v3/indexer/schema
+
+## POST /api/v3/indexer/test
+**Parameters**:
+- `forceTest` (query boolean): 
+**Body**: Requires object `IndexerResource`
+
+## POST /api/v3/indexer/testall
+
+## POST /api/v3/indexer/action/{name}
+**Parameters**:
+- `name`* (path string): 
+**Body**: Requires object `IndexerResource`
+
+## GET /api/v3/config/indexer
+
+## PUT /api/v3/config/indexer/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `IndexerConfigResource`
+
+## GET /api/v3/config/indexer/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/indexerflag
+
+## GET /api/v3/language
+
+## GET /api/v3/language/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/languageprofile
+**Body**: Requires object `LanguageProfileResource`
+
+## GET /api/v3/languageprofile
+
+## DELETE /api/v3/languageprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/languageprofile/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `LanguageProfileResource`
+
+## GET /api/v3/languageprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/languageprofile/schema
+
+## GET /api/v3/localization
+
+## GET /api/v3/localization/language
+
+## GET /api/v3/localization/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/log
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `level` (query string): 
+
+## GET /api/v3/log/file
+
+## GET /api/v3/log/file/{filename}
+**Parameters**:
+- `filename`* (path string): 
+
+## GET /api/v3/manualimport
+**Parameters**:
+- `folder` (query string): 
+- `downloadId` (query string): 
+- `seriesId` (query integer): 
+- `seasonNumber` (query integer): 
+- `filterExistingFiles` (query boolean): 
+
+## POST /api/v3/manualimport
+
+## GET /api/v3/mediacover/{seriesId}/{filename}
+**Parameters**:
+- `seriesId`* (path integer): 
+- `filename`* (path string): 
+
+## GET /api/v3/config/mediamanagement
+
+## PUT /api/v3/config/mediamanagement/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `MediaManagementConfigResource`
+
+## GET /api/v3/config/mediamanagement/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/metadata
+
+## POST /api/v3/metadata
+**Parameters**:
+- `forceSave` (query boolean): 
+**Body**: Requires object `MetadataResource`
+
+## PUT /api/v3/metadata/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `forceSave` (query boolean): 
+**Body**: Requires object `MetadataResource`
+
+## DELETE /api/v3/metadata/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/metadata/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/metadata/schema
+
+## POST /api/v3/metadata/test
+**Parameters**:
+- `forceTest` (query boolean): 
+**Body**: Requires object `MetadataResource`
+
+## POST /api/v3/metadata/testall
+
+## POST /api/v3/metadata/action/{name}
+**Parameters**:
+- `name`* (path string): 
+**Body**: Requires object `MetadataResource`
+
+## GET /api/v3/wanted/missing
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `includeSeries` (query boolean): 
+- `includeImages` (query boolean): 
+- `monitored` (query boolean): 
+
+## GET /api/v3/wanted/missing/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/config/naming
+
+## PUT /api/v3/config/naming/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `NamingConfigResource`
+
+## GET /api/v3/config/naming/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/config/naming/examples
+**Parameters**:
+- `renameEpisodes` (query boolean): 
+- `replaceIllegalCharacters` (query boolean): 
+- `colonReplacementFormat` (query integer): 
+- `customColonReplacementFormat` (query string): 
+- `multiEpisodeStyle` (query integer): 
+- `standardEpisodeFormat` (query string): 
+- `dailyEpisodeFormat` (query string): 
+- `animeEpisodeFormat` (query string): 
+- `seriesFolderFormat` (query string): 
+- `seasonFolderFormat` (query string): 
+- `specialsFolderFormat` (query string): 
+- `id` (query integer): 
+- `resourceName` (query string): 
+
+## GET /api/v3/notification
+
+## POST /api/v3/notification
+**Parameters**:
+- `forceSave` (query boolean): 
+**Body**: Requires object `NotificationResource`
+
+## PUT /api/v3/notification/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `forceSave` (query boolean): 
+**Body**: Requires object `NotificationResource`
+
+## DELETE /api/v3/notification/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/notification/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/notification/schema
+
+## POST /api/v3/notification/test
+**Parameters**:
+- `forceTest` (query boolean): 
+**Body**: Requires object `NotificationResource`
+
+## POST /api/v3/notification/testall
+
+## POST /api/v3/notification/action/{name}
+**Parameters**:
+- `name`* (path string): 
+**Body**: Requires object `NotificationResource`
+
+## GET /api/v3/parse
+**Parameters**:
+- `title` (query string): 
+- `path` (query string): 
+
+## GET /ping
+
+## PUT /api/v3/qualitydefinition/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `QualityDefinitionResource`
+
+## GET /api/v3/qualitydefinition/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/qualitydefinition
+
+## PUT /api/v3/qualitydefinition/update
+
+## GET /api/v3/qualitydefinition/limits
+
+## POST /api/v3/qualityprofile
+**Body**: Requires object `QualityProfileResource`
+
+## GET /api/v3/qualityprofile
+
+## DELETE /api/v3/qualityprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/qualityprofile/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `QualityProfileResource`
+
+## GET /api/v3/qualityprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/qualityprofile/schema
+
+## DELETE /api/v3/queue/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `removeFromClient` (query boolean): 
+- `blocklist` (query boolean): 
+- `skipRedownload` (query boolean): 
+- `changeCategory` (query boolean): 
+
+## DELETE /api/v3/queue/bulk
+**Parameters**:
+- `removeFromClient` (query boolean): 
+- `blocklist` (query boolean): 
+- `skipRedownload` (query boolean): 
+- `changeCategory` (query boolean): 
+**Body**: Requires object `QueueBulkResource`
+
+## GET /api/v3/queue
+**Parameters**:
+- `page` (query integer): 
+- `pageSize` (query integer): 
+- `sortKey` (query string): 
+- `sortDirection` (query string): 
+- `includeUnknownSeriesItems` (query boolean): 
+- `includeSeries` (query boolean): 
+- `includeEpisode` (query boolean): 
+- `seriesIds` (query array): 
+- `protocol` (query string): 
+- `languages` (query array): 
+- `quality` (query array): 
+- `status` (query array): 
+
+## POST /api/v3/queue/grab/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/queue/grab/bulk
+**Body**: Requires object `QueueBulkResource`
+
+## GET /api/v3/queue/details
+**Parameters**:
+- `seriesId` (query integer): 
+- `episodeIds` (query array): 
+- `includeSeries` (query boolean): 
+- `includeEpisode` (query boolean): 
+
+## GET /api/v3/queue/status
+
+## POST /api/v3/release
+**Body**: Requires object `ReleaseResource`
+
+## GET /api/v3/release
+**Parameters**:
+- `seriesId` (query integer): 
+- `episodeId` (query integer): 
+- `seasonNumber` (query integer): 
+
+## POST /api/v3/releaseprofile
+**Body**: Requires object `ReleaseProfileResource`
+
+## GET /api/v3/releaseprofile
+
+## DELETE /api/v3/releaseprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/releaseprofile/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `ReleaseProfileResource`
+
+## GET /api/v3/releaseprofile/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/release/push
+**Body**: Requires object `ReleaseResource`
+
+## POST /api/v3/remotepathmapping
+**Body**: Requires object `RemotePathMappingResource`
+
+## GET /api/v3/remotepathmapping
+
+## DELETE /api/v3/remotepathmapping/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/remotepathmapping/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `RemotePathMappingResource`
+
+## GET /api/v3/remotepathmapping/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/rename
+**Parameters**:
+- `seriesId` (query integer): 
+- `seasonNumber` (query integer): 
+
+## POST /api/v3/rootfolder
+**Body**: Requires object `RootFolderResource`
+
+## GET /api/v3/rootfolder
+
+## DELETE /api/v3/rootfolder/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/rootfolder/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/seasonpass
+**Body**: Requires object `SeasonPassResource`
+
+## GET /api/v3/series
+**Parameters**:
+- `tvdbId` (query integer): 
+- `includeSeasonImages` (query boolean): 
+
+## POST /api/v3/series
+**Body**: Requires object `SeriesResource`
+
+## GET /api/v3/series/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `includeSeasonImages` (query boolean): 
+
+## PUT /api/v3/series/{id}
+**Parameters**:
+- `moveFiles` (query boolean): 
+- `id`* (path string): 
+**Body**: Requires object `SeriesResource`
+
+## DELETE /api/v3/series/{id}
+**Parameters**:
+- `id`* (path integer): 
+- `deleteFiles` (query boolean): 
+- `addImportListExclusion` (query boolean): 
+
+## PUT /api/v3/series/editor
+**Body**: Requires object `SeriesEditorResource`
+
+## DELETE /api/v3/series/editor
+**Body**: Requires object `SeriesEditorResource`
+
+## GET /api/v3/series/{id}/folder
+**Parameters**:
+- `id`* (path integer): 
+
+## POST /api/v3/series/import
+
+## GET /api/v3/series/lookup
+**Parameters**:
+- `term` (query string): 
+
+## GET /content/{path}
+**Parameters**:
+- `path`* (path string): 
+
+## GET /
+**Parameters**:
+- `path`* (path string): 
+
+## GET /{path}
+**Parameters**:
+- `path`* (path string): 
+
+## GET /api/v3/system/status
+
+## GET /api/v3/system/routes
+
+## GET /api/v3/system/routes/duplicate
+
+## POST /api/v3/system/shutdown
+
+## POST /api/v3/system/restart
+
+## GET /api/v3/tag
+
+## POST /api/v3/tag
+**Body**: Requires object `TagResource`
+
+## PUT /api/v3/tag/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `TagResource`
+
+## DELETE /api/v3/tag/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/tag/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/tag/detail
+
+## GET /api/v3/tag/detail/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/system/task
+
+## GET /api/v3/system/task/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## PUT /api/v3/config/ui/{id}
+**Parameters**:
+- `id`* (path string): 
+**Body**: Requires object `UiConfigResource`
+
+## GET /api/v3/config/ui/{id}
+**Parameters**:
+- `id`* (path integer): 
+
+## GET /api/v3/config/ui
+
+## GET /api/v3/update
+
+## GET /api/v3/log/file/update
+
+## GET /api/v3/log/file/update/{filename}
+**Parameters**:
+- `filename`* (path string): 
